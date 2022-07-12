@@ -1,0 +1,14 @@
+.navWrapper {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav {
+    background-color:transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
