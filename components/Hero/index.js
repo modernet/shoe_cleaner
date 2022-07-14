@@ -21,7 +21,7 @@ export default function Hero() {
         </h1>
         <div className={styles.buttonWrapper}>
           <Button size="large" variant="contained" sx={{
-            'background-color':'#7851a9', 
+            'backgroundColor':'#7851a9', 
             'textColor':'#fff',
             'borderRadius': 8,
             '&:hover': {
