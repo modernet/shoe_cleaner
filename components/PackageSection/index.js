@@ -1,16 +1,15 @@
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import React from 'react';
-import { client } from '../../lib/client';
 
 import styles from './PackageSection.module.css';
 import Package from '../../public/images/package.jpg'
 
-export default function PackageSection({products}) {
+export default function PackageSection() {
   return (
     <>
-    {console.log(products)}
         <div className={styles.container}>
+            
             <div className={styles.wrapper}>
                 <div className={styles.imgContainer}>
                     
@@ -40,13 +39,3 @@ export default function PackageSection({products}) {
   )
 }
 
-export const getServerSideProps = async () => {
-    const query = '*[_type == "product"]';
-    const products = await client.fetch(query);
-
-    return {
-      props: { 
-        data: {products}
-     }
-    }
-}

@@ -1,7 +1,7 @@
 export default {
     name: 'product',
-    title: 'Product',
     type: 'document',
+    title: 'Product',
     fields: [
         {
             name: 'image',
@@ -35,6 +35,6 @@ export default {
             name: 'details',
             title: 'Details',
             type: 'string'
-        },
+        }
     ]
 }
