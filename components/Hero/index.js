@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import CallMade from '@mui/icons-material/CallMade';
 
 import styles from './Hero.module.css';
 
@@ -19,11 +20,16 @@ export default function Hero() {
           SHOE CARE
         </h1>
         <div className={styles.buttonWrapper}>
-          <Button variant="contained" sx={{
+          <Button size="large" variant="contained" sx={{
             'background-color':'#7851a9', 
-            'textColor':'#f444'
+            'textColor':'#fff',
+            'borderRadius': 8,
+            '&:hover': {
+              color: '#fff',
+              backgroundColor: '#000',
+            }
             }}>
-            Buy Now!
+            SHOP NOW   <CallMade fontSize="inherit"/>
           </Button>
         </div>
       </div>
