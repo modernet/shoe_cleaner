@@ -17,7 +17,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className={styles.googleMap}>
-                <iframe src="/iframe.html" width={100%} height="100vh" ></iframe>
+                <iframe src="/iframe.html"  className={styles.iframe} ></iframe>
                 </div>
             </div>
         </div>
