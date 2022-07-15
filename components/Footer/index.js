@@ -7,8 +7,8 @@ export default function Footer() {
     <>
         <div className={styles.footerContainer}>
             <div className={styles.footerWrapper}>
-                <div className={styles.contact}>
-                    <ul>
+                <div>
+                    <ul className={styles.contact}>
                         <li>All Rights Reserved</li>
                         <li>2022 &copy;</li>
                         <li><a href="/">About Us</a></li>
@@ -17,7 +17,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className={styles.googleMap}>
-                    tesst
+                <iframe src="/iframe.html" width={100%} height="100vh" ></iframe>
                 </div>
             </div>
         </div>
