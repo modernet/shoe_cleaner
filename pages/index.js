@@ -3,8 +3,8 @@ import Hero from '../components/Hero';
 import ProductSection from '../components/ProductSection';
 import { CssBaseline } from '@mui/material';
 import PackageSection from '../components/PackageSection';
-import Product from '../components/Product';
 import { client } from '../lib/client';
+import Footer from '../components/Footer';
 
 
 export default function Home({products}) {
@@ -15,10 +15,11 @@ export default function Home({products}) {
       <Navbar />
       <Hero />
       <ProductSection />
-      {/* <PackageSection /> */}
-      <div className="package">
+      <PackageSection />
+      {/* <div className="package">
       {products?.map((product) => <Product key={product._id} product={product} />)}
-      </div>
+      </div> */}
+      <Footer />
     </div>
   )
 }

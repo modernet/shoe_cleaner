@@ -1,9 +1,10 @@
 import Button from '@mui/material/Button';
-import Image from 'next/image';
 import React from 'react';
-
 import styles from './PackageSection.module.css';
-import Package from '../../public/images/package.jpg'
+import Image from 'next/image';
+
+import Package from '../../public/images/shoes.jpg'
+
 
 export default function PackageSection() {
   return (
