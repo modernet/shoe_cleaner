@@ -1,3 +1,8 @@
 .MuiAppbar-root {
     display: flex;
 }
+
+.card-container {
+    padding: 10px;
+    margin-top: 80px;
+}
