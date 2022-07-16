@@ -17,16 +17,16 @@ export default function Hero() {
         <h1>
           THE <br />
           SUPERIOR <br />
-          SHOE CARE
+          SHOE CLEANER
         </h1>
         <div className={styles.buttonWrapper}>
           <Button size="large" variant="contained" sx={{
-            'backgroundColor':'#7851a9', 
-            'textColor':'#fff',
+            'backgroundColor':'#FFD700', 
+            'color':'#000',
             'borderRadius': 8,
             '&:hover': {
               color: '#fff',
-              backgroundColor: '#000',
+              backgroundColor: '#7851a9',
             }
             }}>
             SHOP NOW   <CallMade fontSize="inherit"/>

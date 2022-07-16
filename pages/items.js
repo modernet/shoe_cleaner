@@ -13,9 +13,9 @@ export default function Items({products}) {
         <Grid container spacing={2} xs={{
           marginTop : '40px',
         }} >
-        <div className="package">
+        <Grid item sx={3}>
         {products?.map((product) => <Product item xs={3} key={product._id} product={product} />)}
-        </div>
+        </Grid>
         </Grid>
         </CssBaseline>
     </div>
