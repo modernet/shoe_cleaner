@@ -16,7 +16,7 @@ export default function Items({products}) {
         <Navbar />
         <div className="items">
         <Grid container spacing={2} >
-        <Grid item sx={3}>
+        <Grid item>
         {products?.map((product) => <Product item xs={3} key={product._id} product={product} />)}
         </Grid>
         </Grid>
