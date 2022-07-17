@@ -11,3 +11,8 @@
     width: 400px;
     height: 400px;
 }
+
+.items {
+    background: grey;
+    height: 950px;
+}

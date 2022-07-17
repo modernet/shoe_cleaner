@@ -10,7 +10,7 @@ export default function Hero() {
     <div className={styles.container}>
       <div className={styles.hero}>
         <video autoPlay muted loop className={styles.video}>
-            <source src="videos/skateboard.mp4" type="video/mp4" />
+            <source src="videos/shoescleaning.mp4" type="video/mp4" />
         </video>
       </div>
       <div className={styles.content}>
@@ -20,8 +20,8 @@ export default function Hero() {
           SHOE CLEANER
         </h1>
         <div className={styles.buttonWrapper}>
-          <Button size="large" variant="contained" sx={{
-            'backgroundColor':'#FFD700', 
+          <Button href="/items" size="large" variant="contained" sx={{
+            'backgroundColor':'#EBD247', 
             'color':'#000',
             'borderRadius': 8,
             '&:hover': {

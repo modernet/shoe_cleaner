@@ -22,7 +22,7 @@ export default function PackageSection() {
                 <div className={styles.contentContainer}>
                     <h4 className={styles.h5}>OUR PRODUCTS</h4>
                     <h2>Lorem ipsum dolor sit amet, consectetur</h2>
-                    <Button size="large" variant="contained" sx={{
+                    <Button href="/items" size="large" variant="contained" sx={{
                         'backgroundColor' : '#000',
                         'textColor' : '#fff',
                         'borderRadius' : 8,

@@ -20,7 +20,7 @@ export default function Sidebar({ isOpen, toggle }) {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="productDetails" smooth={true} onClick={toggle}>
+            <SidebarLink>
               About Us
             </SidebarLink>
             <SidebarLink to="productStory" smooth={true} onClick={toggle}>
@@ -34,7 +34,7 @@ export default function Sidebar({ isOpen, toggle }) {
             </SidebarLink> */}
           </SidebarMenu>
           <SideBtnWrap>
-            <Link href="/" passHref>
+            <Link href="/items" passHref>
               <SidebarRouter>Shop Now</SidebarRouter>
             </Link>
           </SideBtnWrap>
