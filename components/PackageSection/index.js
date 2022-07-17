@@ -9,7 +9,7 @@ import Package from '../../public/images/shoes.jpg'
 export default function PackageSection() {
   return (
     <>
-        <div className={styles.container}>
+        <div id="productSlides" className={styles.container}>
             
             <div className={styles.wrapper}>
                 <div className={styles.imgContainer}>

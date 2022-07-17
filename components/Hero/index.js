@@ -14,7 +14,7 @@ export default function Hero() {
         </video>
       </div>
       <div className={styles.content}>
-        <h1>
+        <h1 className={styles.text}>
           THE <br />
           SUPERIOR <br />
           SHOE CLEANER

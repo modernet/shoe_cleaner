@@ -6,7 +6,8 @@ import PackageSection from '../components/PackageSection';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar'
-import Carousel from '../components/Carousel';
+// import Simple from '../components/Carousel';
+
 
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
       <PackageSection />
       <Footer />
 
-      <Carousel />
+      {/* <Simple deviceType="desktop"/> */}
 
       </CssBaseline>
     </div>

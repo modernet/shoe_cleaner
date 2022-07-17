@@ -39,6 +39,12 @@
   align-items: center;
 }
 
+.text {
+  color: transparent;
+  font-size: 42px;
+  -webkit-text-stroke: 2px #fff;
+}
+
 .buttonWrapper {
     margin-top: 32px;
   display: flex;

@@ -16,26 +16,26 @@ export default function Sidebar({ isOpen, toggle }) {
     <div>
       <SidebarContainer isOpen={isOpen} onClick={toggle}>
         <Icon onClick={toggle}>
-         <CloseIcon sx={{'color' : 'red'}} />
+         <CloseIcon sx={{'color' : '#fff'}} />
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="about" smooth={true} onClick={toggle}>
-              About
+            <SidebarLink to="productDetails" smooth={true} onClick={toggle}>
+              About Us
             </SidebarLink>
-            <SidebarLink to="workflow" smooth={true} onClick={toggle}>
-              Why Us
+            <SidebarLink to="productStory" smooth={true} onClick={toggle}>
+              How it Works
             </SidebarLink>
-            <SidebarLink to="services" smooth={true} onClick={toggle}>
-              Services
+            <SidebarLink to="productSlides" smooth={true} onClick={toggle}>
+              Products
             </SidebarLink>
-            <SidebarLink to="ecommerce" smooth={true} onClick={toggle}>
+            {/* <SidebarLink to="ecommerce" smooth={true} onClick={toggle}>
               Ecommerce
-            </SidebarLink>
+            </SidebarLink> */}
           </SidebarMenu>
           <SideBtnWrap>
-            <Link href="/calendly" passHref>
-              <SidebarRouter>Contact Us</SidebarRouter>
+            <Link href="/" passHref>
+              <SidebarRouter>Shop Now</SidebarRouter>
             </Link>
           </SideBtnWrap>
         </SidebarWrapper>

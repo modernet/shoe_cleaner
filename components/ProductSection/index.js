@@ -8,7 +8,7 @@ import Shoes from '../../public/images/shoes.jpg';
 export default function ProductSection() {
   return (
     <>
-    <div className={styles.container}>
+    <div id="productStory" className={styles.container}>
         <div className={styles.wrapper}>
             <div className={styles.imageContainer}>
                 <div className={styles.imageBackground}>
