@@ -9,7 +9,7 @@ export default function Hero() {
     <>
     <div className={styles.container}>
       <div className={styles.hero}>
-        <video autoPlay muted loop className={styles.video}>
+        <video autoPlay playsinline muted loop className={styles.video}>
             <source src="videos/shoescleaning.mp4" type="video/mp4" />
         </video>
       </div>
