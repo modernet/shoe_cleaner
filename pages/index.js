@@ -6,7 +6,7 @@ import PackageSection from '../components/PackageSection';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar'
-// import Simple from '../components/Carousel';
+import Simple from '../components/Carousel';
 
 
 

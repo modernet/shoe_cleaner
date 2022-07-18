@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import React from 'react';
 import styles from './PackageSection.module.css';
 import Image from 'next/image';
-
+import Carousel from '../Carousel';
 import Package from '../../public/images/shoes.jpg'
 
 
@@ -14,9 +14,9 @@ export default function PackageSection() {
             <div className={styles.wrapper}>
                 <div className={styles.imgContainer}>
                     
-                        <div className={styles.imgBackground}>
-                            <Image src={Package} alt="test" />
-                        </div>
+                    
+                            <Carousel />
+                        
                     
                 </div>
                 <div className={styles.contentContainer}>

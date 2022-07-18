@@ -1,140 +1,106 @@
-import Image from "next/image";
-import { useEmblaCarousel } from "embla-carousel/react";
-import { useState, useEffect, useCallback } from "react";
-import Link from "next/link";
+import React, {useState} from 'react';
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider } from 'keen-slider/react';
+import { Button, Card, Typography } from '@mui/material';
+import Image from 'next/image'
 
-export default function Hero(props) {
+const Carousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
+    }, 
+    size: 0
+  })
 
-  // emblaRef will be a reference to our carousel viewport
-  const [emblaRef, embla] = useEmblaCarousel({
-
-    align: "start",
-    // aligns the first slide to the start
-    // of the viewport else will align it to the middle.
-
-    loop: true,
-    // we need the carousel to loop to the
-    // first slide once it reaches the last slide.
-
-    skipSnaps: false,
-    // Allow the carousel to skip scroll snaps if
-    // it's dragged vigorously.
-
-    inViewThreshold: 0.7,
-    // percentage of a slide that need's to be visible
-    // inorder to be considered in view, 0.7 is 70%.
-  });
-
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState([]);
-
-  // this function allow's us to scroll to the slide whose
-  // id correspond's to the id of the navigation dot when we
-  // click on it.
-
-  const scrollTo = useCallback(
-    (index) => embla && embla.scrollTo(index),
-    [embla]
-  );
-
-  // set the id of the current slide to active id
-  // we need it to correctly highlight it's corresponding
-  // navigation dot.
-
-  const onSelect = useCallback(() => {
-    if (!embla) return;
-    setSelectedIndex(embla.selectedScrollSnap());
-  }, [embla, setSelectedIndex]);
-
-  // make sure embla is mounted and return true operation's
-  // can be only performed on it if it's successfully mounted.
-
-  useEffect(() => {
-    if (!embla) return;
-    onSelect();
-    setScrollSnaps(embla.scrollSnapList());
-    embla.on("select", onSelect);
-  }, [embla, setScrollSnaps, onSelect]);
-
-  return (<div className="py-12 mx-auto max-w-6xl px-5">
-  {/* title */}
-  <div className="flex justify-center items-center pb-10">
-    <h2 className="text-center text-black dark:text-gray-100 text-4xl font-bold">
-      Trending
-    </h2>
-  </div>
-
-  // Carousel viewport
-  <div className="overflow-hidden" ref={emblaRef}>
-  // Carousel container
-    <div className="flex">
-    // Carousel slide's
-      {props.posts.map((post) => (
-        <div
-          className="relative flex flex-none flex-wrap lg:flex-nowrap w-full mx-10"
-          key={post.title}
-        >
-          <div className="overflow-hidden cursor-pointer lg:w-1/2">
-            <Link href={`/blog/${post.slug}`}>
-              <a>
-                <Image
-                  src={post.image_cover}
-                  height={514}
-                  width={800}
-                  className="rounded-lg"
-                  alt="cover image"
-                  placeholder="blur"
-                  blurDataURL={post.image_cover}
-                />
-              </a>
-            </Link>
-          </div>
-          {/* content */}
-          <div className="flex flex-col space-y-4 lg:w-4/5 lg:space-x-20 lg:justify-center">
-            {/* tags and date */}
-            <div className="flex text-sm mt-4 space-x-5 lg:mx-20">
-              <p className="font-bold dark:text-white">{post.tags}</p>
-              <p className="font-normal text-gray-500 dark:text-gray-400">
-                {format(parseISO(post.publishedAt), "MMMM dd, yyyy")}
-              </p>
+  return (
+    <>
+    <div className="keen-container">
+    <div className="navigation-wrapper">
+      <div ref={sliderRef} className="keen-slider">
+        <div className="keen-slider__slide number-slide1">
+          <Card sx={{
+            'padding':'10px',
+          }}>
+            <Image width={300} height={250} src="/images/shoes.jpg" alt="yeh" />
+            <div>
+            <Typography>hello world</Typography>
+            <Button variant="contained">Buy Now</Button>
             </div>
-            {/* title */}
-            <Link href={`/blog/${post.slug}`}>
-              <a className="cursor-pointer">
-                <h2 className="text-3xl lg:text-4xl font-bold dark:text-gray-100">
-                  {post.title}
-                </h2>
-              </a>
-            </Link>
-            <Link href={`/blog/${post.slug}`}>
-              <a className="cursor-pointer">
-                <p className="text-gray-500 text-justify">{post.summary}</p>
-              </a>
-            </Link>
-            <div className="flex items-center">
-              <div className="h-12 w-12">
-                <Image
-                  src="/img/avatar-banner-360x360.png"
-                  height="260"
-                  width="260"
-                  alt="avatar image"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex flex-col mx-4 space-y-1">
-                <strong className="text-sm dark:text-gray-100">
-                  {post.author}
-                </strong>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {post.designation}
-                </p>
-              </div>
-            </div>
-          </div>
+          </Card>
         </div>
-      ))}
+        <div className="keen-slider__slide number-slide2">2</div>
+        <div className="keen-slider__slide number-slide3">3</div>
+        <div className="keen-slider__slide number-slide4">4</div>
+      </div>
+      {loaded && instanceRef.current && (
+        <>
+          <Arrow
+            left
+            onClick={(e) =>
+              e.stopPropagation() || instanceRef.current?.prev()
+            }
+            disabled={currentSlide === 0}
+          />
+
+          <Arrow
+            onClick={(e) =>
+              e.stopPropagation() || instanceRef.current?.next()
+            }
+            disabled={
+              currentSlide ===
+              instanceRef.current.track.details.slides.length - 1
+            }
+          />
+        </>
+      )}
     </div>
-  </div>
-</div>
-)
+    {loaded && instanceRef.current && (
+      <div className="dots">
+        {[
+          ...Array(instanceRef.current.track.details.slides.length).keys(),
+        ].map((idx) => {
+          return (
+            <button
+              key={idx}
+              onClick={() => {
+                instanceRef.current?.moveToIdx(idx)
+              }}
+              className={"dot" + (currentSlide === idx ? " active" : "")}
+            ></button>
+          )
+        })}
+      </div>
+    )}
+    </div>
+  </>
+  )
 }
+
+function Arrow(props) {
+  const disabeld = props.disabled ? " arrow--disabled" : ""
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? "arrow--left" : "arrow--right"
+      } ${disabeld}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
+  )
+}
+
+export default Carousel
