@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'next/link'
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -11,9 +11,9 @@ export default function Footer() {
                     <ul className={styles.contact}>
                         <li>All Rights Reserved</li>
                         <li>2022 &copy;</li>
-                        <li><a href="/">About Us</a></li>
-                        <li><a href="/">Contact Us</a></li>
-                        <li><a href="/">sample</a></li>
+                        <li><Link href="/">About Us</Link></li>
+                        <li><Link href="/">Contact Us</Link></li>
+                        <li><Link href="/">sample</Link></li>
                     </ul>
                 </div>
                 <div className={styles.googleMap}>
