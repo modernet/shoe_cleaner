@@ -22,7 +22,7 @@ export default function ProductSection() {
             </div>
         </div>
           <Link href="/" passHref >
-              <a className={styles.link}>READ OUR STORY</a>
+              <p className={styles.link}>READ OUR STORY</p>
           </Link>
     </div>   
     </>
