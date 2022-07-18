@@ -21,8 +21,8 @@ export default function ProductSection() {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget augue vitae massa vulputate tincidunt. Vestibulum sed urna sed enim facilisis hendrerit. Nulla facilisi. Donec et nunc risus. Ut scelerisque lacinia tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             </div>
         </div>
-          <Link href="/" passHref >
-              <p className={styles.link}>READ OUR STORY</p>
+          <Link href="/" passHref className={styles.link}>
+              READ OUR STORY
           </Link>
     </div>   
     </>
