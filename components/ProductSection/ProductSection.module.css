@@ -1,11 +1,10 @@
 .container {
     padding-top: 20px;
     width: 100%;
-    
 }
 
 .wrapper {
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -13,8 +12,13 @@
 }
 
 .imageContainer {
-   width: 350px;
+   width: 100%;
    padding-top: 40px;
+}
+
+.imageBackground {
+    
+    padding: 60px;
 }
 
 .content {
@@ -28,6 +32,6 @@
 
 .link {
     text-decoration: underline;
-    color:yellow;
+    color:#EBD247;
     margin-left: 40px;
 }

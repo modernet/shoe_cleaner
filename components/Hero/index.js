@@ -25,8 +25,8 @@ export default function Hero() {
             'color':'#000',
             'borderRadius': 8,
             '&:hover': {
-              color: '#fff',
-              backgroundColor: '#7851a9',
+              color: '#000',
+              backgroundColor: '#FAA82C',
             }
             }}>
             SHOP NOW   <CallMade fontSize="inherit"/>

@@ -17,6 +17,9 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className={styles.googleMap}>
+                    <h5 style={{
+                        marginLeft: '10px'
+                    }}>Come Visit Us!</h5>
                 <iframe src="/iframe.html"  className={styles.iframe} ></iframe>
                 </div>
             </div>

@@ -23,15 +23,15 @@ export default function PackageSection() {
                     <h4 className={styles.h5}>OUR PRODUCTS</h4>
                     <h2>Lorem ipsum dolor sit amet, consectetur</h2>
                     <Button href="/items" size="large" variant="contained" sx={{
-                        'backgroundColor' : '#000',
-                        'textColor' : '#fff',
+                        'backgroundColor' : '#EBD247',
+                        'color' : '#000',
                         'borderRadius' : 8,
                         '&:hover' : {
-                            color: '#fff',
-                            backgroundColor: '#7851a9'
+                            color: '#000',
+                            backgroundColor: '#FAA82C'
                         }
                     }}>
-                        SHOP ALL OUR PRODUCTS
+                        SHOP NOW
                     </Button>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import {
   SidebarRouter,
   SidebarMenu,
   SideBtnWrap,
+  SidebarAbout
 } from "./SidebarElement";
 import CloseIcon from '@mui/icons-material/Close';
 import Link from "next/link";
@@ -20,9 +21,14 @@ export default function Sidebar({ isOpen, toggle }) {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink>
+            <Link href="/" passHref>
+              <SidebarAbout onClick={toggle} >
+              
               About Us
-            </SidebarLink>
+              
+              </SidebarAbout>
+              </Link>
+            
             <SidebarLink to="productStory" smooth={true} onClick={toggle}>
               How it Works
             </SidebarLink>

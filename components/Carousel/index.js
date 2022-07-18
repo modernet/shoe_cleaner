@@ -15,7 +15,11 @@ const Carousel = () => {
     created() {
       setLoaded(true)
     }, 
-    size: 0
+    size: 0,
+    slides: {
+      perView: 2,
+      spacing: 15
+    }
   })
 
   return (
@@ -27,14 +31,31 @@ const Carousel = () => {
           <Card sx={{
             'padding':'10px',
           }}>
-            <Image width={300} height={250} src="/images/shoes.jpg" alt="yeh" />
+            <Image width={300} height={250} padding={10} src="/images/shoes.jpg" alt="yeh" />
             <div>
-            <Typography>hello world</Typography>
-            <Button variant="contained">Buy Now</Button>
+            <Typography>Complete Package</Typography>
+            <Button variant="contained" sx={{
+              'background':'#EBD247',
+              'color':'#000'
+            }}>Buy Now</Button>
             </div>
           </Card>
         </div>
-        <div className="keen-slider__slide number-slide2">2</div>
+        <div className="keen-slider__slide number-slide2">
+        <Card sx={{
+            'padding':'10px',
+            
+          }}>
+            <Image width={300} height={250} padding={10} src="/images/shoes.jpg" alt="yeh" />
+            <div>
+            <Typography>Complete Package</Typography>
+            <Button variant="contained" sx={{
+              'background':'#EBD247',
+              'color':'#000'
+            }}>Buy Now</Button>
+            </div>
+          </Card>
+        </div>
         <div className="keen-slider__slide number-slide3">3</div>
         <div className="keen-slider__slide number-slide4">4</div>
       </div>

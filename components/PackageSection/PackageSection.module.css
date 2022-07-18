@@ -1,5 +1,4 @@
 .container {
-    background-color: #EBD247;
     width: 100%;
     padding-bottom: 20px
 }
@@ -22,7 +21,7 @@
 }
 
 .h5 {
-    color: #eee;
+    color: #EBD247;
 }
 
 .productContainer {

@@ -21,7 +21,7 @@
 }
 
 .number-slide1 {
-  background: #EBD247;
+  background: #fff;
   /* background: linear-gradient(
     128deg,
     rgba(64, 175, 255, 1) 0%,
@@ -30,12 +30,12 @@
 }
 
 .number-slide2 {
-  background: rgb(255, 75, 64);
-  background: linear-gradient(
+  background: #fff;
+  /* background: linear-gradient(
     128deg,
     rgba(255, 154, 63, 1) 0%,
     rgba(255, 75, 64, 1) 100%
-  );
+  ); */
 }
 
 .number-slide3 {
@@ -114,7 +114,7 @@
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  fill: #fff;
+  fill: #EBD247;
   cursor: pointer;
 }
 
@@ -128,5 +128,5 @@
 }
 
 .arrow--disabled {
-  fill: rgba(255, 255, 255, 0.5);
+  fill: #EBD247;
 }
