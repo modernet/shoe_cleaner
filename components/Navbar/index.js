@@ -27,7 +27,7 @@ export default function Navbar({toggle}) {
     <Nav scrollNav={scrollNav} >
       <div className={styles.nav}>
         <div className={styles.navWrapper}>
-        <Menu sx={{ color:'#fff', cursor:'pointer'}} onClick={toggle}/>
+        <Menu className="menu" sx={{ color:'#fff', cursor:'pointer'}} onClick={toggle}/>
         <a><img src="" alt="Logo" /></a>
         <ShoppingCart sx={{ color:'#fff', cursor:'pointer'}} />
         </div>
