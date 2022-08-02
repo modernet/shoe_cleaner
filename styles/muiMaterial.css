@@ -132,6 +132,10 @@
   fill: #EBD247;
 }
 
+.body {
+  max-width: 100%;
+}
+
 .menu {
 
   

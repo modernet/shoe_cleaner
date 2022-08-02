@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Menu from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
-import {Nav} from './styledcomponent';
+import {MobileIcon, Nav, NavbarContainer, NavLogo, NavMenu} from './styledcomponent';
 import styles from './Navbar.module.css';
 
 
@@ -25,13 +25,14 @@ export default function Navbar({toggle}) {
   return (
     <>
     <Nav scrollNav={scrollNav} >
-      <div className={styles.nav}>
-        <div className={styles.navWrapper}>
+      <NavbarContainer>
+        <MobileIcon>
         <Menu className="menu" sx={{ color:'#fff', cursor:'pointer'}} onClick={toggle}/>
-        <a><img src="" alt="Logo" /></a>
+        </MobileIcon>
+        <NavLogo><img src="" alt="Logo" /></NavLogo>
         <ShoppingCart sx={{ color:'#fff', cursor:'pointer'}} />
-        </div>
-      </div>
+        
+      </NavbarContainer>
     </Nav>
     </>
   )
