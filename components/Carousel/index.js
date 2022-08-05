@@ -18,7 +18,7 @@ const Carousel = () => {
     size: 0,
     slides: {
       perView: 2,
-      spacing: 15
+      
     }
   })
 

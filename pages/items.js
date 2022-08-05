@@ -11,7 +11,7 @@ export default function Items({products}) {
   
 
   return (
-    <div>
+    <div className="color">
         <CssBaseline>
         <Navbar />
         <div className="items">
