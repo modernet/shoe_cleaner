@@ -1,14 +1,16 @@
 import React,{useState, useEffect} from 'react';
-import Container from '@mui/material/Container';
 import Menu from '@mui/icons-material/Menu';
-import AppBar from '@mui/material/AppBar';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import {Nav} from './styledcomponent';
 import styles from './Navbar.module.css';
+import Cart from '../Cart';
+import { useStateContext } from '../../context/StateContext';
 
 
 export default function Navbar({toggle}) {
   const [scrollNav, setScrollNav] = useState(false);
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
+
 
   const changeNav = () => {
     if (window.scrollY >= 650) {
@@ -29,7 +31,12 @@ export default function Navbar({toggle}) {
         <div className={styles.navWrapper}>
         <Menu sx={{ color:'#fff', cursor:'pointer'}} onClick={toggle}/>
         <a><img src="" alt="Logo" /></a>
-        <ShoppingCart sx={{ color:'#fff', cursor:'pointer'}} />
+        <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
+        <ShoppingCart  sx={{ color:'#fff', cursor:'pointer'}} />
+        <span className="cart-item-qty">{totalQuantities}</span>
+        </button>
+
+        {showCart && <Cart />}
         </div>
       </div>
     </Nav>
