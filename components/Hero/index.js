@@ -20,7 +20,7 @@ export default function Hero() {
           SHOE CLEANER
         </h1>
         <div className={styles.buttonWrapper}>
-          <Button href="/items" size="large" variant="contained" sx={{
+          <Button href="/product" size="large" variant="contained" sx={{
             'backgroundColor':'#EBD247', 
             'color':'#000',
             'borderRadius': 8,

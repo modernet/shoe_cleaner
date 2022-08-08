@@ -5,7 +5,8 @@ import PackageSection from "../components/PackageSection";
 
 import React, { useState } from "react";
 import { client } from "../lib/client";
-import Product from "../components/Product";
+
+import Product from '../components/Product';
 
 export default function Home({products}) {
   return (
@@ -13,11 +14,11 @@ export default function Home({products}) {
       <CssBaseline>
         <Hero />
         <ProductSection />
-        <div className="products-container">
+        <div className="product-container">
       {products?.map((product) => <Product key={product._id} product={product} />)}
     </div>
         <PackageSection />
-
+        
         {/* <Simple deviceType="desktop"/> */}
       </CssBaseline>
     </div>

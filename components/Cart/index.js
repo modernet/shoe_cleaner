@@ -9,6 +9,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useStateContext } from '../../context/StateContext';
 import { urlFor } from '../../lib/client';
 import getStripe from '../../lib/getStripe';
+import { loadStripe } from '@stripe/stripe-js';
 
 const Cart = () => {
   const cartRef = useRef();
@@ -77,7 +78,7 @@ const Cart = () => {
                     <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec') }>
                     <RemoveIcon />
                     </span>
-                    <span className="num" onClick="">{item.quantity}</span>
+                    <span className="num" >{item.quantity}</span>
                     <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc') }><AddIcon /></span>
                   </p>
                   </div>
