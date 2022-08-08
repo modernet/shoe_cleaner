@@ -2,6 +2,7 @@
     margin-bottom: -20px;
     width: 100%;
     background-color: #fff;
+    height: 400px;
 }
 
 .wrapper {
@@ -35,4 +36,11 @@
     text-decoration: underline;
     color:#EBD247;
     margin-left: 40px;
+}
+
+@media only screen and (max-width: 768px){
+  .container {
+    width: 68%;
+    flex-direction: column;
+  }
 }

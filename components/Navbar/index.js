@@ -5,11 +5,13 @@ import {Nav} from './styledcomponent';
 import styles from './Navbar.module.css';
 import Cart from '../Cart';
 import { useStateContext } from '../../context/StateContext';
+import { useRouter } from 'next/router';
 
 
 export default function Navbar({toggle}) {
   const [scrollNav, setScrollNav] = useState(false);
   const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const router = useRouter();
 
 
   const changeNav = () => {
@@ -30,11 +32,11 @@ export default function Navbar({toggle}) {
       <div className={styles.nav}>
         <div className={styles.navWrapper}>
         <button type="button" className="cart-icon">
-        <Menu sx={{ color:'#fff', cursor:'pointer'}} onClick={toggle}/>
+        <Menu sx={{  color : router.route == "/" ? "#fff" : "#000", cursor:'pointer'}} onClick={toggle}/>
         </button>
         <a><img src="" alt="Logo" /></a>
         <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
-        <ShoppingCart  sx={{ color:'#fff', cursor:'pointer'}} />
+        <ShoppingCart  sx={{ color : router.route == "/" ? "#fff" : "#000", cursor:'pointer'}} />
         <span className="cart-item-qty">{totalQuantities}</span>
         </button>
 

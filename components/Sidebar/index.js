@@ -32,7 +32,7 @@ export default function Sidebar({ isOpen, toggle }) {
             <SidebarLink to="productStory" smooth={true} onClick={toggle}>
               How it Works
             </SidebarLink>
-            <SidebarLink to="" smooth={true} onClick={toggle}>
+            <SidebarLink to="product" smooth={true} onClick={toggle}>
               Products
             </SidebarLink>
             {/* <SidebarLink to="ecommerce" smooth={true} onClick={toggle}>

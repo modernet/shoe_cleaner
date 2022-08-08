@@ -14,7 +14,7 @@ export default function Home({products}) {
       <CssBaseline>
         <Hero />
         <ProductSection />
-        <div className="product-container">
+        <div id="product" className="product-container">
       {products?.map((product) => <Product key={product._id} product={product} />)}
     </div>
         <PackageSection />
