@@ -241,7 +241,6 @@ span.text-red {
   margin-top: 20px;
   width: 100%;
   background-color: #fff;
-  margin-top: -20px;
 }
 .product-card {
   cursor: pointer;
@@ -819,6 +818,7 @@ span.text-red {
   .cart-container {
     width: 415px;
     padding: 4px;
+    height: 85vh;
   }
   .cart-heading {
     margin-top: 35px;
@@ -908,5 +908,12 @@ span.text-red {
 
 
 @media only screen and (max-width: 768px){
-  
+  .product-container{
+    margin-top: 120px;
+  }
+
+  .products-page{
+    flex-direction: column;
+  }
+
 }

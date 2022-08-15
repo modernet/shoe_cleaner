@@ -5,7 +5,7 @@ import PackageSection from "../components/PackageSection";
 
 import React, { useState } from "react";
 import { client } from "../lib/client";
-
+import ProductContainer from "../components/productContainer";
 import Product from '../components/Product';
 
 export default function Home({products}) {

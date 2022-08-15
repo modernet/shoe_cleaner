@@ -17,7 +17,8 @@ function MyApp({ Component, pageProps }) {
     <>
     <StateContext>
       <Head>
-        <meta name="viewport" content="width=980" />
+      <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />

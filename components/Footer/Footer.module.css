@@ -2,7 +2,8 @@
     background: #faebd7;
     color: #000;
     width: 100%;
-    height: 320px;
+    min-height: 320px;
+    overflow: auto;
 }
 
 .footerWrapper {
@@ -11,6 +12,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    
 }
 
 .contact {
