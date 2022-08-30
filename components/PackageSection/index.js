@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import React from 'react';
 import styles from './PackageSection.module.css';
-
+import Gallery from '../Carousel/index';
 
 export default function PackageSection() {
   return (
@@ -10,13 +10,11 @@ export default function PackageSection() {
             
             <div className={styles.wrapper}>
                 <div className={styles.imgContainer}>
-                    
-                        
-                    
+                    <Gallery />
                 </div>
                 <div className={styles.contentContainer}>
                     <h4 className={styles.h5}>OUR PRODUCTS</h4>
-                    <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+                    <h2 className={styles.h2}>Lorem ipsum dolor sit amet, consectetur</h2>
                     <Button href="/product" size="large" variant="contained" sx={{
                         'backgroundColor' : '#EBD247',
                         'color' : '#000',

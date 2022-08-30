@@ -7,16 +7,17 @@ import React, { useState } from "react";
 import { client } from "../lib/client";
 import ProductContainer from "../components/productContainer";
 import Product from '../components/Product';
+import Gallery from "../components/Carousel";
 
 export default function Home({products}) {
   return (
     <div>
       <CssBaseline>
         <Hero />
-        <ProductSection />
         <div id="product" className="product-container">
       {products?.map((product) => <Product key={product._id} product={product} />)}
-    </div>
+        </div>
+        <ProductSection />
         <PackageSection />
         
         {/* <Simple deviceType="desktop"/> */}

@@ -13,7 +13,7 @@ export default function Footer() {
                         <li>2022 &copy;</li>
                         <li><Link href="/">About Us</Link></li>
                         <li><Link href="/">Contact Us</Link></li>
-                        <li><Link href="/">sample</Link></li>
+                        {/* <li><Link href="/">sample</Link></li> */}
                     </ul>
                 </div>
                 <div className={styles.googleMap}>

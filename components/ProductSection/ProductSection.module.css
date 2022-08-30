@@ -1,8 +1,9 @@
 .container {
     /* margin-bottom: -20px; */
     width: 100%;
-    background-color: #fff;
+    background-color: #000;
     /* height: 400px; */
+    color: #fff;
     
 }
 
@@ -14,8 +15,8 @@
 }
 
 .imageContainer {
-   width: 100%;
-   padding-top: 40px;
+   width: 600px;
+   margin: auto;
 }
 
 .imageBackground {
@@ -26,6 +27,8 @@
 .content {
     text-align: auto;
     padding: 40px;
+    width: 600px;
+    margin: auto;
 }
 
 .h2{
@@ -39,8 +42,11 @@
 }
 
 @media only screen and (max-width: 768px){
-  .container {
-    
-    
+  .imageContainer{
+    width: 100%;
+  }
+
+  .content{
+    width: 100%;
   }
 }
