@@ -37,7 +37,7 @@ export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
-  text-align: center;
+  text-align: left;
 
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);
@@ -55,10 +55,17 @@ export const SidebarLink = styled(Scroll)`
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+  margin: 0 90px;
 
   &:hover {
     color: #f2b807;
     transition: 0.2s ease-in-out;
+  }
+
+  @media only screen and (max-width: 768px){
+    align-items: left;
+    justify-content: left;
+    margin: 0 80px;
   }
 `;
 
@@ -73,10 +80,17 @@ export const SidebarAbout = styled.a`
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+  
 
   &:hover {
     color: #f2b807;
     transition: 0.2s ease-in-out;
+  }
+
+  @media only screen and (max-width: 768px){
+    align-items: left;
+    justify-content: left;
+    margin: 0 80px;
   }
 `;
 
@@ -104,3 +118,4 @@ export const SidebarRouter = styled.a`
     color: 010606;
   }
 `;
+

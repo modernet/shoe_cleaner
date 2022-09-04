@@ -25,7 +25,7 @@ export default function ProductSection() {
               nunc risus. Ut scelerisque lacinia tincidunt. Orci varius natoque
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             </p>
-            <Link href="/" passHref className={styles.link}>
+            <Link href="/" passHref>
               READ OUR STORY
             </Link>
           </div>

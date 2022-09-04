@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import {Toaster} from 'react-hot-toast';
 import {StateContext} from '../context/StateContext';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, products }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -17,7 +17,8 @@ function MyApp({ Component, pageProps }) {
     <>
     <StateContext>
       <Head>
-      <meta name="viewport" content="width=device-width,initial-scale=1"/>
+      <meta name="viewport" content="width=device-width, initial-scale = 1.0, 
+maximum-scale=1.0, user-scalable=no" />
 
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -31,3 +32,12 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "product"]';
+  const products = await client.fetch(query);
+  
+  return {
+    props: { products}
+  }
+}

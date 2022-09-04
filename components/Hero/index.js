@@ -16,13 +16,13 @@ export default function Hero() {
       <div className={styles.content}>
         <h1 className={styles.text}>
           THE <br />
-          SUPERIOR <br />
-          SHOE CLEANER
+          SUPERIOR <br/>
+          <span className={styles.colorChange}>SHOE CARE</span>
         </h1>
         <div className={styles.buttonWrapper}>
           <Button href="/product" size="large" variant="contained" sx={{
             'backgroundColor':'#EBD247', 
-            'color':'#000',
+            'color':'#fff',
             'borderRadius': 8,
             '&:hover': {
               color: '#000',

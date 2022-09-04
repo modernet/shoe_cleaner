@@ -23,12 +23,16 @@
 }
 
 .h5 {
-    color: #EBD247;
+    color: #fff;
     margin-bottom: 20px;
+    text-align: left;
+    margin-left: 40px;
 }
 
 .h2{
     margin-bottom: 20px;
+    text-align: left;
+    margin-left: 40px;
 }
 
 .contentContainer{
@@ -36,9 +40,16 @@
     margin: auto;
 }
 
+.fonts{
+   text-align: center;
+}
+
 @media only screen and (max-width:768px){
     .contentContainer{
         width: 100%;
-        padding: 10px;
     }
+
+    
+
+
 }

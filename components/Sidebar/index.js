@@ -21,29 +21,34 @@ export default function Sidebar({ isOpen, toggle }) {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            
-              <SidebarAbout  to="productSlides" smooth={true} onClick={toggle} >
+            {/* <SidebarLink> */}
+            <Link href="/">
+              <SidebarAbout >
+              Home
+              </SidebarAbout>
+            </Link>
+            {/* </SidebarLink> */}
+            <Link href="/about">
+              <SidebarAbout >
               
               About Us
               
               </SidebarAbout>
               
-            
+            </Link>
             <SidebarLink to="productStory" smooth={true} onClick={toggle}>
               How it Works
             </SidebarLink>
             <SidebarLink to="product" smooth={true} onClick={toggle}>
               Products
             </SidebarLink>
-            {/* <SidebarLink to="ecommerce" smooth={true} onClick={toggle}>
-              Ecommerce
-            </SidebarLink> */}
+            
           </SidebarMenu>
-          <SideBtnWrap>
+          {/* <SideBtnWrap>
             <Link href="/" passHref>
               <SidebarRouter>Home</SidebarRouter>
             </Link>
-          </SideBtnWrap>
+          </SideBtnWrap> */}
         </SidebarWrapper>
       </SidebarContainer>
     </div>

@@ -7,13 +7,15 @@ export default function Footer() {
     <>
         <div className={styles.footerContainer}>
             <div className={styles.footerWrapper}>
-                <div>
+                <div className={styles.footerText}>
                     <ul className={styles.contact}>
-                        <li>All Rights Reserved</li>
-                        <li>2022 &copy;</li>
+                        
+                        
                         <li><Link href="/">About Us</Link></li>
                         <li><Link href="/">Contact Us</Link></li>
                         {/* <li><Link href="/">sample</Link></li> */}
+                        <br />
+                        <li>All Rights Reserved 2022 &copy;</li>
                     </ul>
                 </div>
                 <div className={styles.googleMap}>

@@ -2,7 +2,7 @@
     background: #000;
     color: #fff;
     width: 100%;
-    min-height: 320px;
+    min-height: 520px;
     overflow: auto;
 }
 
@@ -22,9 +22,10 @@
 
 .googleMap {
     
-    margin-top: 20px;
+    margin: 20px 0 20px 0;
     width: 50%;
     height: 50%;
+   
 }
 
 .iframe {
@@ -35,4 +36,13 @@
     /* @media and screen (max-width: 768px) {
         width: 50px;
     } */
+}
+.footerText {
+    margin: 0 20px;
+}
+
+@media only screen and (max-width: 768px){
+    .footerWrapper{
+        flex-direction: column-reverse;
+    }
 }

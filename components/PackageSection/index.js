@@ -13,12 +13,15 @@ export default function PackageSection() {
                     <Gallery />
                 </div>
                 <div className={styles.contentContainer}>
+                    <div className={styles.fonts}>
                     <h4 className={styles.h5}>OUR PRODUCTS</h4>
                     <h2 className={styles.h2}>Lorem ipsum dolor sit amet, consectetur</h2>
+                    </div>
                     <Button href="/product" size="large" variant="contained" sx={{
                         'backgroundColor' : '#EBD247',
-                        'color' : '#000',
+                        'color' : '#fff',
                         'borderRadius' : 8,
+                        'marginLeft' : '40px',
                         '&:hover' : {
                             color: '#000',
                             backgroundColor: '#FAA82C'

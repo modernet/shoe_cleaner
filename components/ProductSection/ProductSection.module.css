@@ -32,7 +32,7 @@
 }
 
 .h2{
-    color:#7851a9;
+    color:#EBD247;
 }
 
 .link {
@@ -48,5 +48,10 @@
 
   .content{
     width: 100%;
+  }
+
+  .content {
+    font-size: 14px;
+  
   }
 }

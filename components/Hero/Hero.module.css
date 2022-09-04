@@ -74,3 +74,13 @@
     transition: all 0.2s ease-in-out;
     
 }
+
+.textTwo {
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.colorChange {
+  color: #fff;
+}
