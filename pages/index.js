@@ -1,37 +1,42 @@
-import Hero from "../components/Hero";
-// import ProductSection from "../components/ProductSection";
-import { CssBaseline } from "@mui/material";
-// import PackageSection from "../components/PackageSection";
-
 import React from "react";
-import { client } from "../lib/client";
+// import ProductSection from "../components/ProductSection";
+// import PackageSection from "../components/PackageSection";
 // import ProductContainer from "../components/productContainer";
 // import Product from '../components/Product';
 // import Gallery from "../components/Carousel";
 // import ProductDetails from "./product/[slug]";
+import ReactFullpage from "@fullpage/react-fullpage";
+import Herosection from "../components/sections/herosection/Herosection";
 
-export default function Home({ products }) {
+export default function Home() {
   return (
     <div>
-      <CssBaseline>
-        <Hero />
-        <div id="product" className="product-container">
-          {/* {products?.map((product) => <Product key={product._id} product={product} />)} */}
-        </div>
-        {/* <ProductSection />
-        <PackageSection /> */}
-
-        {/* <Simple deviceType="desktop"/> */}
-      </CssBaseline>
+      <ReactFullpage
+        licenseKey={"Your_Key"}
+        navigation
+        navigationPosition={"right"}
+        scrollingSpeed={1000}
+        render={({ state, fullpageApi }) => {
+          return (
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <Herosection />
+              </div>
+              <div className="section">Another Section</div>
+              <div className="section">Another Section</div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
     </div>
   );
-};
-
-export const getServerSideProps = async () => {
-  const query = '*[_type == "product"]';
-  const products = await client.fetch(query);
-
-  return {
-    props: { products }
-  }
 }
+
+  // export const getServerSideProps = async () => {
+  //   const query = '*[_type == "product"]';
+  //   const products = await client.fetch(query);
+
+  //   return {
+  //     props: { products }
+  //   }
+

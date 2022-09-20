@@ -5,7 +5,7 @@ const Header = () =>{
         <header className={styles.header}>
             <ul className={styles.headerMenu}>
                 <li>
-                    <a href="">Home</a>
+                    <a className="active" href="">Home</a>
                 </li>
                 <li>
                     <a href="">How it Works</a>

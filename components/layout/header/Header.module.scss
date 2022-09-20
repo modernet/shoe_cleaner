@@ -17,9 +17,15 @@
     padding-left: 115px;
 
     a {
-      color: #0e0116;
-      opacity: 0.3;
+      color: #ffffff;
       display: block;
+      filter: invert(0.4);
+      mix-blend-mode: difference;
+      opacity: 0.85;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

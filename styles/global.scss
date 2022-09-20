@@ -30,3 +30,88 @@ a {
     text-decoration: none;
   }
 }
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#fp-nav.fp-right {
+  right: 100px !important;
+
+  ul {
+    counter-reset: section;
+    width: 10px;
+
+    li {
+      width: 10px;
+      height: auto;
+      margin: 0;
+      width: auto;
+
+      a {
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        transition: all 0.5s ease-in-out 0s;
+
+        span {
+          opacity: 0;
+          visibility: hidden;
+          height: 0;
+          width: 0;
+        }
+
+        &::before {
+          content: "";
+          height: 0;
+          width: 1px;
+          background: #ffffff;
+          display: inline-block;
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transition: all 0.5s ease-in-out 0s;
+          filter: invert(0.3);
+          mix-blend-mode: difference;
+          opacity: 0.6;
+        }
+
+        &::after {
+          content: counter(section, decimal-leading-zero);
+          counter-increment: section;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: #ffffff;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          top: auto;
+          bottom: 0;
+          transition: all 0.5s ease-in-out 0s;
+          filter: invert(0.3);
+          mix-blend-mode: difference;
+          opacity: 0.6;
+        }
+
+        &.active {
+          width: 20px;
+          height: 100px;
+
+          &::before {
+            height: 80px;
+            opacity: 1;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

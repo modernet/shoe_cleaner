@@ -1,20 +1,17 @@
 import Head from "next/head";
-// import "../styles/muiMaterial.css";
 import React, { useState } from "react";
+// import "../styles/muiMaterial.css";
 import "../styles/global.scss";
 // import Sidebar from "../components/Sidebar";
 // import Navbar from "../components/Navbar";
 import { Toaster } from 'react-hot-toast';
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import Layout from "../components/layout/Layout";
 import { StateContext } from '../context/StateContext';
 
-function MyApp({ Component, pageProps, products }) {
+function MyApp({ Component, pageProps, }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <>
       <StateContext>
@@ -29,7 +26,7 @@ maximum-scale=1.0, user-scalable=no" />
         <Layout>
           <Component {...pageProps} />
         </Layout>
-        <Footer />
+        {/* <Footer /> */}
       </StateContext>
     </>
   );
@@ -37,11 +34,11 @@ maximum-scale=1.0, user-scalable=no" />
 
 export default MyApp;
 
-export const getServerSideProps = async () => {
-  const query = '*[_type == "product"]';
-  const products = await client.fetch(query);
+// export const getServerSideProps = async () => {
+//   const query = '*[_type == "product"]';
+//   const products = await client.fetch(query);
 
-  return {
-    props: { products },
-  };
-};
+//   return {
+//     props: { products },
+//   };
+// };
