@@ -1,0 +1,25 @@
+.header {
+  position: fixed;
+  left: 90px;
+  top: 0px;
+  width: calc(100% - 90px);
+  height: auto;
+  z-index: 100;
+}
+
+.headerMenu {
+  text-align: right;
+  padding-right: 90px;
+
+  li {
+    display: inline-block;
+    padding: 40px 0;
+    padding-left: 115px;
+
+    a {
+      color: #0e0116;
+      opacity: 0.3;
+      display: block;
+    }
+  }
+}
