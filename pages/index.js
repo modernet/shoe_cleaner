@@ -7,6 +7,7 @@ import React from "react";
 // import ProductDetails from "./product/[slug]";
 import ReactFullpage from "@fullpage/react-fullpage";
 import AboutUs from "../components/sections/aboutus/AboutUs";
+import ContactUs from "../components/sections/contactus/ContactUs";
 import Herosection from "../components/sections/herosection/Herosection";
 import HowItWorks from "../components/sections/howItWorks/HowItWorks";
 
@@ -30,7 +31,9 @@ export default function Home() {
               <div className="section">
                 <AboutUs />
               </div>
-              <div className="section">Another Section</div>
+              <div className="section">
+                <ContactUs />
+              </div>
             </ReactFullpage.Wrapper>
           );
         }}

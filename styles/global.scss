@@ -3,6 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,6 +14,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: auto;
+  font-family: "Helvetica";
 }
 
 body {
@@ -31,6 +33,10 @@ a {
   }
 }
 
+a,
+button {
+  cursor: pointer;
+}
 .container {
   max-width: 1000px;
   width: 100%;
