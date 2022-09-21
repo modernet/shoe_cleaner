@@ -1,3 +1,18 @@
+@keyframes sliding {
+  0% {
+    transform: translateY(0%);
+  }
+  33% {
+    transform: translateY(-2%);
+  }
+  66% {
+    transform: translateY(2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .herosection {
   min-height: 100vh;
   position: relative;
