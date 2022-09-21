@@ -37,6 +37,26 @@ a {
   margin: 0 auto;
 }
 
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Fullpage Navigation Styles
 #fp-nav.fp-right {
   right: 100px !important;
 

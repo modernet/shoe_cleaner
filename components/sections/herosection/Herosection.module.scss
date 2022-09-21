@@ -32,6 +32,10 @@
 
 .herosectionImage {
   margin-bottom: -120px;
+
+  img {
+    animation: sliding 5s linear 0s infinite;
+  }
 }
 
 .herosectionContent {

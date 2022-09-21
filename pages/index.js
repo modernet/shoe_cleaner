@@ -6,7 +6,9 @@ import React from "react";
 // import Gallery from "../components/Carousel";
 // import ProductDetails from "./product/[slug]";
 import ReactFullpage from "@fullpage/react-fullpage";
+import AboutUs from "../components/sections/aboutus/AboutUs";
 import Herosection from "../components/sections/herosection/Herosection";
+import HowItWorks from "../components/sections/howItWorks/HowItWorks";
 
 export default function Home() {
   return (
@@ -22,7 +24,12 @@ export default function Home() {
               <div className="section">
                 <Herosection />
               </div>
-              <div className="section">Another Section</div>
+              <div className="section">
+                <HowItWorks />
+              </div>
+              <div className="section">
+                <AboutUs />
+              </div>
               <div className="section">Another Section</div>
             </ReactFullpage.Wrapper>
           );
