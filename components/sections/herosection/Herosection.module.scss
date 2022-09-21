@@ -21,6 +21,7 @@
 .herosectionTop {
   background: #040404;
   position: relative;
+  padding-top: 70px;
 }
 
 .herosectionBgtitle {
@@ -28,7 +29,7 @@
   left: 0;
   top: 100px;
   font-weight: 400;
-  font-size: 19vw;
+  font-size: 17vw;
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 5px #a8a8a8;
@@ -37,7 +38,7 @@
 }
 
 .herosectionTopInner {
-  padding-top: 100px;
+  padding-top: 50px;
   display: flex;
   align-items: center;
   position: relative;
@@ -47,7 +48,8 @@
 
 .herosectionImage {
   margin-bottom: -120px;
-
+  margin-left: -80px;
+  margin-right: 80px;
   img {
     animation: sliding 5s linear 0s infinite;
   }
