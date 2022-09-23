@@ -1,45 +1,47 @@
-import React, { useState } from 'react';
-import StarIcon from '@mui/icons-material/Star';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import RemoveIcon from '@mui/icons-material/Remove';
-import AddIcon from '@mui/icons-material/Add';
+import React from "react";
+import ProductDetails from "../../components/sections/productdetails/ProductDetails";
+// import RemoveIcon from "@mui/icons-material/Remove";
+// import AddIcon from "@mui/icons-material/Add";
+
+import { client } from "../../lib/client";
+// import Product from "../../components/Product";
+// import { useStateContext } from "../../context/StateContext";
 
 
-import { client, urlFor } from '../../lib/client';
-import  Product  from '../../components/Product';
-import  {useStateContext}  from '../../context/StateContext';
+const ProductDetailsPage = ({ product, products }) => {
+  // const { image, name, details, price } = product;
+  // const [index, setIndex] = useState(0);
+  // const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
-
-const ProductDetails = ({ product, products }) => {
-  const { image, name, details, price } = product;
-  const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
-
-  const handleBuyNow = () => {
-    onAdd(product, qty);
-
-    setShowCart(true);
-  }
+  // const handleBuyNow = () => {
+  //   onAdd(product, qty);
+  //   setShowCart(true);
+  // };
 
   return (
     <div>
-      <div className="product-detail-container">
-        <div>
+      <ProductDetails />
+      {/* <div className="product-detail-container">
+        <div className="container">
           <div className="image-container">
-            <img src={urlFor(image && image[index])} className="product-detail-image" />
+            <img
+              src={urlFor(image && image[index])}
+              className="product-detail-image"
+            />
           </div>
           <div className="small-images-container">
             {image?.map((item, i) => (
-              <img 
+              <img
                 key={i}
                 src={urlFor(item)}
-                className={i === index ? 'small-image selected-image' : 'small-image'}
+                className={
+                  i === index ? "small-image selected-image" : "small-image"
+                }
                 onMouseEnter={() => setIndex(i)}
               />
             ))}
           </div>
         </div>
-
         <div className="product-detail-desc">
           <h1>{name}</h1>
           {/* <div className="reviews">
@@ -54,37 +56,48 @@ const ProductDetails = ({ product, products }) => {
               (20)
             </p>
           </div> */}
-          <h4>Details: </h4>
+      {/* <h4>Details: </h4>
           <p>{details}</p>
           <p className="price">${price}</p>
           <div className="quantity">
             <h3>Quantity:</h3>
             <p className="quantity-desc">
-              <span className="minus" onClick={decQty}><RemoveIcon /></span>
+              <span className="minus" onClick={decQty}>
+                <RemoveIcon />
+              </span>
               <span className="num">{qty}</span>
-              <span className="plus" onClick={incQty}><AddIcon /></span>
+              <span className="plus" onClick={incQty}>
+                <AddIcon />
+              </span>
             </p>
           </div>
           <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
-            <button type="button" className="buy-now" onClick={handleBuyNow}>Buy Now</button>
+            <button
+              type="button"
+              className="add-to-cart"
+              onClick={() => onAdd(product, qty)}
+            >
+              Add to Cart
+            </button>
+            <button type="button" className="buy-now" onClick={handleBuyNow}>
+              Buy Now
+            </button>
           </div>
         </div>
       </div>
-
       <div className="maylike-products-wrapper">
-          <h2>You may also like</h2>
-          <div className="marquee">
-            <div className="maylike-products-container track">
-              {products.map((item) => (
-                <Product key={item._id} product={item} />
-              ))}
-            </div>
+        <h2>You may also like</h2>
+        <div className="marquee">
+          <div className="maylike-products-container track">
+            {products.map((item) => (
+              <Product key={item._id} product={item} />
+            ))}
           </div>
-      </div>
+        </div>
+      </div> */}
     </div>
-  )
-}
+  );
+};
 
 export const getStaticPaths = async () => {
   const query = `*[_type == "product"] {
@@ -97,29 +110,27 @@ export const getStaticPaths = async () => {
   const products = await client.fetch(query);
 
   const paths = products.map((product) => ({
-    params: { 
-      slug: product.slug.current
-    }
+    params: {
+      slug: product.slug.current,
+    },
   }));
 
   return {
     paths,
-    fallback: 'blocking'
-  }
-}
+    fallback: "blocking",
+  };
+};
 
-export const getStaticProps = async ({ params: { slug }}) => {
+export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-  const productsQuery = '*[_type == "product"]'
-  
-  const product = await client.fetch(query);
-  const products = await client.fetch(productsQuery);
+  // const productsQuery = '*[_type == "product"]';
 
-  console.log(product);
+  const product = await client.fetch(query);
+  // const products = await client.fetch(productsQuery);
 
   return {
-    props: { products, product }
-  }
-}
+    props: { product },
+  };
+};
 
-export default ProductDetails;
+export default ProductDetailsPage;

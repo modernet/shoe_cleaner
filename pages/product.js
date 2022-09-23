@@ -1,25 +1,24 @@
 import React from 'react';
+import Products from '../components/sections/products/Products';
 import { client } from "../lib/client";
-import Product from '../components/Product';
 
-const Items = ({products}) => {
+const Items = ({ products }) => {
   return (
-    <div>
-        <div className="products-page" >
-        {products?.map((product) => <Product  key={product._id} product={product} />)}
-        </div>
+    <div className="products-page" >
+      <Products />
+      {/* {products?.map((product) => <Product  key={product._id} product={product} />)} */}
     </div>
-  )
-}
+  );
+};
 
 export const getServerSideProps = async () => {
-    const query = '*[_type == "product"]';
-    const products = await client.fetch(query);
-    
-    return {
-      props: { products}
-    }
-}
+  const query = '*[_type == "product"]';
+  const products = await client.fetch(query);
 
-export default Items
+  return {
+    props: { products },
+  };
+};
+
+export default Items;
 

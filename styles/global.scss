@@ -62,18 +62,21 @@ pre {
   }
 }
 
-// Fullpage Navigation Styles
-
-.fp-watermark {
-  display: none;
-}
-
-#fp-nav.fp-right {
-  right: 100px !important;
+// Right side bullets
+.rightbullets {
+  position: fixed;
+  left: auto;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
 
   ul {
     counter-reset: section;
     width: 10px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 
     li {
       width: 10px;
@@ -87,14 +90,8 @@ pre {
         width: 20px;
         height: 20px;
         text-align: center;
+        font-size: 0;
         transition: all 0.5s ease-in-out 0s;
-
-        span {
-          opacity: 0;
-          visibility: hidden;
-          height: 0;
-          width: 0;
-        }
 
         &::before {
           content: "";

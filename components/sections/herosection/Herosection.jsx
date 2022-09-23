@@ -30,7 +30,7 @@ const Herosection = () =>{
                 </div>
                 <div className={styles.herosectionBottom}>
                     <div className="container">
-                       <Link href="/">
+                       <Link href="/product">
                         <a className={styles.herosectionButton}>Shop Now</a>
                        </Link>
                     </div>

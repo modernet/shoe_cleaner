@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from "react-scroll";
 import styles from "./Header.module.scss";
 
 const Header = () =>{
@@ -5,16 +6,44 @@ const Header = () =>{
         <header className={styles.header}>
             <ul className={styles.headerMenu}>
                 <li>
-                    <a className="active" href="">Home</a>
+                    <ScrollLink
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    to="section-herosection"
+                    >
+                        Home
+                    </ScrollLink>
                 </li>
                 <li>
-                    <a href="">How it Works</a>
+                    <ScrollLink
+                        activeClass="active"
+                        spy={true}
+                        smooth={true}
+                        to="section-howitworks"
+                        >
+                            How it works
+                    </ScrollLink>
                 </li>
                 <li>
-                    <a href="">About Us</a>
+                    <ScrollLink
+                        activeClass="active"
+                        spy={true}
+                        smooth={true}
+                        to="section-aboutus"
+                        >
+                            About Us
+                    </ScrollLink>
                 </li>
                 <li>
-                    <a href="">Contact Us</a>
+                    <ScrollLink
+                        activeClass="active"
+                        spy={true}
+                        smooth={true}
+                        to="section-contactus"
+                        >
+                            Contact Us
+                        </ScrollLink>
                 </li>
             </ul>
         </header>
