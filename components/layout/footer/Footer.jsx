@@ -57,6 +57,9 @@ const Footer = () =>{
                         <p>Stay up to date with new products and promotions.</p>
                     </div>
                 </div>
+                <div className={styles.footerCopyright}>
+                    <p>&copy; COPYRIGHT SHOEPERIOR 2022. ALL RIGHTS RESERVED</p>
+                </div>
             </div>
         </footer>
     );

@@ -3,6 +3,7 @@ import Products from '../components/sections/products/Products';
 import { client } from "../lib/client";
 
 const Items = ({ products }) => {
+  console.log(products)
   return (
     <div className="products-page" >
       <Products />

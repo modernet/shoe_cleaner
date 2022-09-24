@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { useState } from "react";
 import { HiMinus, HiPlus } from "react-icons/hi";
+import { useStateContext } from "../../../context/StateContext";
 import styles from "./ProductDetails.module.scss";
 
 const ProductDetails = () => {
   const [includeKitStatus, setIncludeKitStatus] = useState(false);
+  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+
   return (
     <div className={styles.prodetails}>
       <div className="container">
@@ -96,24 +99,36 @@ const ProductDetails = () => {
               recommended for cleaning delicate materials such as premium
               leather, suede or cotton mesh.
             </p>
-            <p>
-              <span>Free Domestic Shipping over $75</span>
-            </p>
-            <p>
-              <span>Questions?</span>
-              <a href="mailto:help@shoeperior.com">help@shoeperior.com</a>
-            </p>
+           <div className={styles.prodetailsContentFooter}>
+              <p className="mb-0">
+                  <span>Free Domestic Shipping over $75</span>
+                </p>
+                <p>
+                  <span>Questions?</span>
+                  <a href="mailto:help@shoeperior.com">help@shoeperior.com</a>
+                </p>
+           </div>
             <div className={styles.prodetailsCartbox}>
               <div className={styles.prodetailsQuantitybox}>
-                <button>
+                <button onClick={decQty}>
                   <HiMinus />
                 </button>
-                <span>1</span>
-                <button>
+                <span>{qty}</span>
+                <button onClick={incQty}>
                   <HiPlus />
                 </button>
               </div>
-              <button className={styles.prodetailsCartbutton}>
+              <button 
+              className={styles.prodetailsCartbutton}
+              onClick={()=> onAdd(
+                {
+                  image: "./images/product-image.jpg",
+                  name: "Product Name",
+                  price: 200,
+                },
+                qty
+              )}
+              >
                 Add To Cart
               </button>
             </div>

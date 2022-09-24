@@ -1,3 +1,5 @@
+@import "fonts";
+
 *,
 *::before,
 *::after {
@@ -14,12 +16,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: auto;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
 }
 
 body {
   color: inherit;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;

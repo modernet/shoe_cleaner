@@ -16,20 +16,22 @@
 .herosection {
   min-height: 100vh;
   position: relative;
+  background: #040404;
 }
 
 .herosectionTop {
   background: #040404;
   position: relative;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .herosectionBgtitle {
+  font-family: "Helvetica Neue";
   position: absolute;
   left: 0;
-  top: 100px;
-  font-weight: 400;
-  font-size: 17vw;
+  top: 90px;
+  font-weight: 500;
+  font-size: 32vh;
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 5px #a8a8a8;
@@ -38,29 +40,28 @@
 }
 
 .herosectionTopInner {
-  padding-top: 50px;
+  padding-top: 30px;
   display: flex;
-  align-items: center;
   position: relative;
   z-index: 10;
-  min-height: 67vh;
 }
 
 .herosectionImage {
-  margin-bottom: -120px;
-  margin-left: -80px;
-  margin-right: 80px;
+  margin-bottom: -150px;
+  padding-left: 20px;
   img {
     animation: sliding 5s linear 0s infinite;
   }
 }
 
 .herosectionContent {
+  padding-top: 150px;
   color: #fff;
-  max-width: 380px;
-  margin-left: 100px;
+  max-width: 360px;
+  margin-left: 60px;
 
   h1 {
+    font-family: "Helvetica Neue";
     font-weight: 700;
     font-size: 48px;
     line-height: 59px;
@@ -69,6 +70,7 @@
   }
 
   p {
+    font-family: "Helvetica";
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -82,7 +84,7 @@
   top: auto;
   bottom: 0;
   width: 100%;
-  min-height: 26vh;
+  min-height: 30vh;
   background: #fff;
   display: flex;
   align-items: center;
@@ -94,6 +96,7 @@
   background: #d9d9d9;
   font-weight: 700;
   font-size: 24px;
+  font-family: "Helvetica Neue";
   line-height: 28px;
   border: 0;
   outline: 0;

@@ -3,6 +3,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  font-family: "Helvetica Neue";
+  font-weight: 400;
 }
 
 .prodetailsInner {
@@ -32,7 +34,7 @@
     font-size: 20px;
     line-height: 24px;
     color: #000000;
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
 
   p {
@@ -43,6 +45,19 @@
 
     span {
       color: #606367;
+    }
+  }
+}
+
+.prodetailsContentFooter {
+  margin-bottom: 20px;
+  p {
+    margin-bottom: 0;
+    color: #606367;
+
+    a {
+      text-decoration: none;
+      color: #000;
     }
   }
 }
@@ -67,6 +82,10 @@
   justify-content: space-between;
   align-items: center;
 
+  span {
+    font-family: "Helvetica Neue";
+  }
+
   button {
     border: 0;
     background: transparent;
@@ -80,6 +99,7 @@
 }
 
 .prodetailsCartbutton {
+  font-family: "Helvetica Neue";
   height: 35px;
   background: #0e0116;
   border-radius: 0;
@@ -99,6 +119,7 @@
   height: 40px;
   width: 100%;
   position: relative;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 

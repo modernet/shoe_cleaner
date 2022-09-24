@@ -1,19 +1,20 @@
-import React, { useRef } from 'react';
-import Link from 'next/link';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-import toast from 'react-hot-toast';
 import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import RemoveIcon from '@mui/icons-material/Remove';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Link from 'next/link';
+import React, { useRef } from 'react';
+import toast from 'react-hot-toast';
 import { useStateContext } from '../../context/StateContext';
 import { urlFor } from '../../lib/client';
 import getStripe from '../../lib/getStripe';
-import { loadStripe } from '@stripe/stripe-js';
+// import { loadStripe } from '@stripe/stripe-js';
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  const { totalPrice,
+    totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
@@ -26,8 +27,8 @@ const Cart = () => {
       body: JSON.stringify(cartItems),
     });
 
-    if(response.statusCode === 500) return;
-    
+    if (response.statusCode === 500) return;
+
     const data = await response.json();
 
     toast.loading('Redirecting...');
@@ -39,9 +40,9 @@ const Cart = () => {
     <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
         <button
-        type="button"
-        className="cart-heading"
-        onClick={() => setShowCart(false)}>
+          type="button"
+          className="cart-heading"
+          onClick={() => setShowCart(false)}>
           <ChevronLeftIcon />
           <span className="heading">Your Cart</span>
           <span className="cart-num-items">({totalQuantities} items)</span>
@@ -66,7 +67,7 @@ const Cart = () => {
         <div className="product-container">
           {cartItems.length >= 1 && cartItems.map((item) => (
             <div className="product" key={item._id}>
-              <img src={urlFor(item?.image[0])} className="cart-product-image" />
+              <img src={urlFor(item?.image[0])} className="cart-product-image" alt='cart product image' />
               <div className="item-desc">
                 <div className="flex top">
                   <h5>{item.name}</h5>
@@ -74,13 +75,13 @@ const Cart = () => {
                 </div>
                 <div className="flex bottom">
                   <div>
-                  <p className="quantity-desc">
-                    <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec') }>
-                    <RemoveIcon />
-                    </span>
-                    <span className="num" >{item.quantity}</span>
-                    <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc') }><AddIcon /></span>
-                  </p>
+                    <p className="quantity-desc">
+                      <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec')}>
+                        <RemoveIcon />
+                      </span>
+                      <span className="num" >{item.quantity}</span>
+                      <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc')}><AddIcon /></span>
+                    </p>
                   </div>
                   <button
                     type="button"
@@ -112,4 +113,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default Cart;
