@@ -33,9 +33,9 @@
   position: absolute;
   left: 0;
   top: auto;
-  bottom: -4vh;
+  bottom: 20vh;
   font-weight: 500;
-  font-size: 18vw;
+  font-size: 18vh;
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 5px #a8a8a8;
@@ -45,14 +45,15 @@
 
   @media #{$layout-tablet} {
     top: 50px;
-    opacity: 0.1;
+    opacity: 0.2;
     -webkit-text-stroke: 3px #a8a8a8;
   }
 
   @media #{$layout-mobile} {
-    top: 50px;
+    top: 80px;
     opacity: 0.9;
     -webkit-text-stroke: 1px #a8a8a8;
+    font-size: 14vh;
   }
 }
 

@@ -1,9 +1,9 @@
+import Image from "next/image";
+import toast from "react-hot-toast";
 import { HiMinus, HiPlus } from "react-icons/hi";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { useStateContext } from "../../../context/StateContext";
-import Image from "next/image";
 import getStripe from "../../../lib/getStripe";
-import toast from "react-hot-toast";
 
 const ShoppingCart = () => {
   const {
@@ -75,7 +75,7 @@ const ShoppingCart = () => {
                 className="shopcartProductClose"
                 onClick={() => onRemove(item)}
               >
-                <RiDeleteBin5Line />
+                <RiDeleteBin5Line/>
               </button>
             </div>
           ))}
