@@ -66,15 +66,13 @@
 .notifyMessage {
   position: absolute;
   left: 90px;
-  font-weight: 500;
   top: 0;
   height: auto;
   width: calc(100% - 90px);
   background: #dfb625;
-  color: #000;
+  color: #000000;
   text-align: center;
   z-index: 10;
-  font-family: "Helvetica Neue";
 
   @media #{$layout-tablet} {
     left: 60px;
@@ -83,6 +81,5 @@
   @media #{$layout-mobile} {
     left: 60px;
     width: calc(100% - 60px);
-    font-size: 12px;
   }
 }

@@ -6,6 +6,7 @@ import { useStateContext } from "../../../context/StateContext";
 
 const Sidebar = () => {
   const { headerStatus, setHeaderStatus } = useStateContext();
+
   return (
     <aside className="sidebar">
       <div className="sidebarLogo">
@@ -20,11 +21,11 @@ const Sidebar = () => {
             />
           </a>
         </Link>
-        <button 
-        className="sidebarToggle"
-        onClick={()=> setHeaderStatus(!headerStatus)}
+        <button
+          className="sidebarToggle"
+          onClick={() => setHeaderStatus(!headerStatus)}
         >
-          { !headerStatus ? <HiOutlineMenu/> : <HiX/> }
+          {!headerStatus ? <HiOutlineMenu /> : <HiX />}
         </button>
       </div>
 

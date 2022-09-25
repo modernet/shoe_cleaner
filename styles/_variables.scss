@@ -1,13 +1,7 @@
-$layout-bigdesktop: "only screen and (min-width: 1536px) and (max-width:1899px)";
-
-$layout-desktop: "only screen and (min-width:1200px) and (max-width:1535px)";
-
-$layout-laptop: "only screen and (min-width:992px) and (max-width:1199px)";
-
-$layout-tablet: "only screen and (min-width:768px) and (max-width:991px)";
-
-$layout-mobile: "only screen and (max-width:767px)";
-
-$layout-landscape: "only screen and (min-width:576px) and (max-width:767px)";
-
-$layout-portait: "only screen and (max-width:575px)";
+$layout-bigdesktop: "only screen and (min-width: 1536px) and (max-width: 1899px)";
+$layout-desktop: "only screen and (min-width: 1200px) and (max-width: 1535px)";
+$layout-laptop: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$layout-tablet: "only screen and (min-width: 768px) and (max-width: 991px)";
+$layout-mobile: "only screen and (max-width: 767px)";
+$layout-landscape: "only screen and (min-width: 576px) and (max-width: 767px)";
+$layout-portait: "only screen and (max-width: 575px)";
