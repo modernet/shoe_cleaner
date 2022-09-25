@@ -20,12 +20,34 @@
       transform: scale(1.1);
     }
   }
+
+  @media #{$layout-tablet} {
+    padding: 50px 0;
+  }
+
+  @media #{$layout-mobile} {
+    padding: 50px 0px;
+    flex-wrap: wrap;
+  }
 }
 
 .aboutLeft {
   border-radius: 15px;
   flex: 0 0 454px;
   overflow: hidden;
+
+  @media #{$layout-laptop} {
+    flex: 0 0 350px;
+  }
+
+  @media #{$layout-tablet} {
+    flex: 0 0 350px;
+  }
+
+  @media #{$layout-mobile} {
+    flex: 0 0 100%;
+    max-width: 320px;
+  }
 }
 
 .aboutRight {
@@ -36,5 +58,21 @@
     font-size: 16px;
     line-height: 20px;
     color: #0e0116;
+  }
+
+  @media #{$layout-laptop} {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  @media #{$layout-tablet} {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  @media #{$layout-mobile} {
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

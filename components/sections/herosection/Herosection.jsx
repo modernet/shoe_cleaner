@@ -16,7 +16,6 @@ const Herosection = () => {
                 height={605}
                 width={403}
                 alt="Hero-image"
-                layout="responsive"
               />
             </div>
             <div className="herosectionContent">

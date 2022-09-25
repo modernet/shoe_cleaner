@@ -2,12 +2,29 @@
   background: #06010c;
   margin-left: 90px;
   padding: 55px 0;
+
+  @media #{$layout-tablet} {
+    margin-left: 60px;
+  }
+
+  @media #{$layout-mobile} {
+    margin-left: 60px;
+  }
 }
 .footerInner {
   display: flex;
   justify-content: space-around;
   gap: 30px;
   padding: 0 100px;
+
+  @media #{$layout-tablet} {
+    padding: 0;
+  }
+
+  @media #{$layout-mobile} {
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }
 .footerWidget {
   flex: 1 0 0%;
@@ -46,6 +63,10 @@
       background: #dfb625;
       color: #06010c;
     }
+  }
+
+  @media #{$layout-mobile} {
+    flex: 0 0 100%;
   }
 }
 .footerWidgetTitle {

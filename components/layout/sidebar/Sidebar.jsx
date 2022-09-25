@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { useStateContext } from "../../../context/StateContext";
 
 const Sidebar = () => {
+  const { headerStatus, setHeaderStatus } = useStateContext();
   return (
     <aside className="sidebar">
       <div className="sidebarLogo">
@@ -13,9 +16,16 @@ const Sidebar = () => {
               height={44}
               width={64}
               alt="site-logo"
+              priority={true}
             />
           </a>
         </Link>
+        <button 
+        className="sidebarToggle"
+        onClick={()=> setHeaderStatus(!headerStatus)}
+        >
+          { !headerStatus ? <HiOutlineMenu/> : <HiX/> }
+        </button>
       </div>
 
       <div className="sidebarSocialmenu">

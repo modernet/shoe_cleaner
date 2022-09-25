@@ -4,7 +4,7 @@
   right: 90px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 9999;
+  z-index: 30;
 
   ul {
     counter-reset: section;
@@ -78,7 +78,15 @@
     }
   }
 
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media #{$layout-laptop} {
     right: 40px;
+  }
+
+  @media #{$layout-tablet} {
+    display: none;
+  }
+
+  @media #{$layout-mobile} {
+    display: none;
   }
 }

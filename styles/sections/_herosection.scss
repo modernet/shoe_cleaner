@@ -21,45 +21,71 @@
 }
 
 .herosectionTop {
-  background: #040404;
   position: relative;
-  padding-top: 50px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 60px;
 }
 
 .herosectionBgtitle {
   font-family: "Helvetica Neue";
   position: absolute;
   left: 0;
-  top: 90px;
+  top: auto;
+  bottom: 20vh;
   font-weight: 500;
-  font-size: 32vh;
+  font-size: 18vh;
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 5px #a8a8a8;
   opacity: 0.15;
   text-transform: uppercase;
+  margin-bottom: 0;
+
+  @media #{$layout-tablet} {
+    top: 50px;
+    opacity: 0.2;
+    -webkit-text-stroke: 3px #a8a8a8;
+  }
+
+  @media #{$layout-mobile} {
+    top: 50px;
+    opacity: 0.9;
+    -webkit-text-stroke: 1px #a8a8a8;
+    font-size: 10vh;
+  }
 }
 
 .herosectionTopInner {
-  padding-top: 30px;
   display: flex;
+  height: 100%;
+  align-items: flex-end;
   position: relative;
   z-index: 10;
 }
 
 .herosectionImage {
   margin-bottom: -150px;
-  padding-left: 20px;
   width: 403px;
   max-width: 100%;
 
   img {
     animation: sliding 5s linear 0s infinite;
   }
+  @media #{$layout-tablet} {
+    width: 265px;
+  }
+
+  @media #{$layout-mobile} {
+    margin-bottom: 0;
+    margin-top: 11vh;
+    width: 225px;
+  }
 }
 
 .herosectionContent {
-  padding-top: 150px;
+  padding-bottom: 18vh;
   color: #fff;
   max-width: 360px;
   margin-left: 60px;
@@ -79,6 +105,10 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media #{$layout-mobile} {
+    display: none;
+  }
 }
 
 .herosectionBottom {
@@ -92,7 +122,11 @@
   background: #fff;
   display: flex;
   align-items: center;
-  z-index: 5;
+
+  @media #{$layout-mobile} {
+    align-items: end;
+    padding: 100px 0 20px 0;
+  }
 }
 
 .herosectionButton {
@@ -110,9 +144,20 @@
   position: relative;
   z-index: 80;
   display: inline-block;
+  border-radius: 100px;
 
   &:hover {
     background: #000;
     color: #fff;
+  }
+
+  @media #{$layout-tablet} {
+    padding: 12px 50px;
+    font-size: 20px;
+  }
+
+  @media #{$layout-mobile} {
+    padding: 12px 50px;
+    font-size: 20px;
   }
 }

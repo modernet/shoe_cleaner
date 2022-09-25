@@ -1,20 +1,37 @@
 .prodetails {
   padding-top: 120px;
+  padding-bottom: 80px;
   min-height: 100vh;
   display: flex;
   align-items: center;
   font-family: "Helvetica Neue";
   font-weight: 400;
+
+  @media #{$layout-tablet} {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media #{$layout-mobile} {
+    padding-top: 80px;
+  }
 }
 
 .prodetailsInner {
   display: flex;
+
+  @media #{$layout-mobile} {
+    flex-wrap: wrap;
+  }
 }
 
 .prodetailsImage {
   flex: 0 0 46%;
   span {
     vertical-align: middle;
+  }
+
+  @media #{$layout-mobile} {
+    flex: 0 0 100%;
   }
 }
 
@@ -48,6 +65,27 @@
       color: #606367;
     }
   }
+
+  @media #{$layout-laptop} {
+    padding-left: 30px;
+  }
+  @media #{$layout-tablet} {
+    padding-left: 25px;
+
+    h2 {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+  @media #{$layout-mobile} {
+    margin-top: 30px;
+    padding-left: 0px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
 }
 
 .prodetailsContentFooter {
@@ -66,12 +104,13 @@
 .prodetailsCartbox {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .prodetailsQuantitybox {
   display: inline-block;
   position: relative;
-  width: 195px;
+  width: 165px;
   height: 35px;
   background: #d9d9d9;
   font-weight: 400;
@@ -114,6 +153,14 @@
   display: inline-block;
   cursor: pointer;
   transition: all 0.4s ease-in-out 0s;
+
+  @media #{$layout-tablet} {
+    padding: 0 30px;
+  }
+
+  @media #{$layout-mobile} {
+    padding: 0 40px;
+  }
 }
 
 .prodetailsIncluded {

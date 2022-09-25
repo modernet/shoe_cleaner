@@ -1,12 +1,13 @@
-import { Link as ScrollLink } from "react-scroll";
-import { useRouter } from "next/router";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { Link as ScrollLink } from "react-scroll";
+import { useStateContext } from "../../../context/StateContext";
 
 const Header = () => {
   const router = useRouter();
-
+  const { headerStatus, setHeaderStatus} = useStateContext(); 
   return (
-    <header className="header">
+    <header className={`header ${headerStatus ? "open" : null}`}>
       <ul className="headerMenu">
         <li>
           {router?.pathname === "/" ? (
@@ -15,12 +16,13 @@ const Header = () => {
               spy={true}
               smooth={true}
               to="section-herosection"
+              onClick={()=> setHeaderStatus(false)}
             >
               Home
             </ScrollLink>
           ) : (
             <Link href="/">
-              <a>Home</a>
+              <a onClick={() => setHeaderStatus(false)}>Home</a>
             </Link>
           )}
         </li>
@@ -31,12 +33,13 @@ const Header = () => {
               spy={true}
               smooth={true}
               to="section-howitworks"
+              onClick={()=> setHeaderStatus(false)}
             >
               How it Works
             </ScrollLink>
           ) : (
             <Link href="/">
-              <a>How it Works</a>
+              <a onClick={()=> setHeaderStatus(false)}>How it Works</a>
             </Link>
           )}
         </li>
@@ -47,12 +50,13 @@ const Header = () => {
               spy={true}
               smooth={true}
               to="section-aboutus"
+              onClick={()=> setHeaderStatus(false)}
             >
               About Us
             </ScrollLink>
           ) : (
             <Link href="/">
-              <a>About Us</a>
+              <a onClick={()=> setHeaderStatus(false)}>About Us</a>
             </Link>
           )}
         </li>
@@ -63,12 +67,13 @@ const Header = () => {
               spy={true}
               smooth={true}
               to="section-contactus"
+              onClick={()=> setHeaderStatus(false)}
             >
               Contact Us
             </ScrollLink>
           ) : (
             <Link href="/">
-              <a>Contact Us</a>
+              <a onClick={()=> setHeaderStatus(false)}>Contact Us</a>
             </Link>
           )}
         </li>

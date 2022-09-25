@@ -1,9 +1,18 @@
 .wrapper {
   position: relative;
+  width: 100%;
 }
 
 .pageContent {
   margin-left: 90px;
+
+  @media #{$layout-tablet} {
+    margin-left: 60px;
+  }
+
+  @media #{$layout-mobile} {
+    margin-left: 60px;
+  }
 }
 
 .cartButton {
@@ -39,5 +48,41 @@
     color: #fff;
     mix-blend-mode: initial;
     filter: initial;
+  }
+
+  @media #{$layout-tablet} {
+    bottom: auto;
+    top: 65px;
+    right: 15px;
+  }
+
+  @media #{$layout-mobile} {
+    bottom: auto;
+    top: 65px;
+    right: 15px;
+  }
+}
+
+.notifyMessage {
+  position: absolute;
+  left: 90px;
+  font-weight: 500;
+  top: 0;
+  height: auto;
+  width: calc(100% - 90px);
+  background: #dfb625;
+  color: #000;
+  text-align: center;
+  z-index: 10;
+  font-family: "Helvetica Neue";
+
+  @media #{$layout-tablet} {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+  @media #{$layout-mobile} {
+    left: 60px;
+    width: calc(100% - 60px);
+    font-size: 12px;
   }
 }

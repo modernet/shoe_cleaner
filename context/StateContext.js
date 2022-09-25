@@ -1,10 +1,11 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { toast } from "react-hot-toast";
 
 const Context = createContext();
 
 export const StateContext = ({ children }) => {
   const [showCart, setShowCart] = useState(false);
+  const [headerStatus, setHeaderStatus] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
@@ -38,6 +39,8 @@ export const StateContext = ({ children }) => {
 
       setCartItems([...cartItems, { ...product }]);
     }
+
+    setShowCart(true);
 
     toast.success(`${qty} ${product.name} added to the cart.`);
   };
@@ -109,6 +112,8 @@ export const StateContext = ({ children }) => {
         setCartItems,
         setTotalPrice,
         setTotalQuantities,
+        headerStatus,
+        setHeaderStatus,
       }}
     >
       {children}

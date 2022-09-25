@@ -1,8 +1,9 @@
-import { HiMinus, HiPlus, HiX } from "react-icons/hi";
-import { useStateContext } from "../../../context/StateContext";
 import Image from "next/image";
-import getStripe from "../../../lib/getStripe";
 import toast from "react-hot-toast";
+import { HiMinus, HiPlus } from "react-icons/hi";
+import { RiDeleteBin5Line } from "react-icons/ri";
+import { useStateContext } from "../../../context/StateContext";
+import getStripe from "../../../lib/getStripe";
 
 const ShoppingCart = () => {
   const {
@@ -56,7 +57,7 @@ const ShoppingCart = () => {
               <div className="shopcartProductContent">
                 <h4>{item.name}</h4>
                 <h5>${item.price}</h5>
-                <div className="prodetailsQuantitybox">
+                <div className="shopcartQuantitybox">
                   <button
                     onClick={() => toggleCartItemQuanitity(item._id, "dec")}
                   >
@@ -74,7 +75,7 @@ const ShoppingCart = () => {
                 className="shopcartProductClose"
                 onClick={() => onRemove(item)}
               >
-                <HiX />
+                <RiDeleteBin5Line/>
               </button>
             </div>
           ))}
