@@ -1,0 +1,52 @@
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.howitworks {
+  background: #040404;
+}
+
+.howitworksInner {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.howitworksLeft {
+  margin-left: -50px;
+  width: 535px;
+  max-width: 100%;
+
+  img {
+    transform-origin: center center;
+    animation: rotateCircle 20s linear 0s infinite reverse;
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 400px;
+  }
+}
+
+.howitworksRight {
+  ul {
+    padding-left: 85px;
+    list-style: decimal;
+
+    li {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: #ffffff;
+      opacity: 0.7;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.header {
+  position: fixed;
+  left: 90px;
+  top: 0px;
+  width: calc(100% - 90px);
+  height: auto;
+  z-index: 100;
+}
+
+.headerMenu {
+  text-align: right;
+  padding-right: 90px;
+
+  li {
+    display: inline-block;
+    padding: 40px 0;
+    padding-left: 115px;
+
+    a {
+      color: #ffffff;
+      display: block;
+      filter: invert(0.4);
+      mix-blend-mode: difference;
+      opacity: 0.85;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

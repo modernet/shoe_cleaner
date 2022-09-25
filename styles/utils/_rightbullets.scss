@@ -1,0 +1,84 @@
+.rightbullets {
+  position: fixed;
+  left: auto;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  ul {
+    counter-reset: section;
+    width: 10px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    li {
+      width: 10px;
+      height: auto;
+      margin: 0;
+      width: auto;
+
+      a {
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 0;
+        transition: all 0.5s ease-in-out 0s;
+
+        &::before {
+          content: "";
+          height: 0;
+          width: 1px;
+          background: #ffffff;
+          display: inline-block;
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transition: all 0.5s ease-in-out 0s;
+          filter: invert(0.3);
+          mix-blend-mode: difference;
+          opacity: 0.6;
+        }
+
+        &::after {
+          content: counter(section, decimal-leading-zero);
+          counter-increment: section;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: #ffffff;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          top: auto;
+          bottom: 0;
+          transition: all 0.5s ease-in-out 0s;
+          filter: invert(0.3);
+          mix-blend-mode: difference;
+          opacity: 0.6;
+        }
+
+        &.active {
+          width: 20px;
+          height: 100px;
+
+          &::before {
+            height: 80px;
+            opacity: 1;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    right: 40px;
+  }
+}
