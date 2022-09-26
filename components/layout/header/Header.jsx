@@ -1,29 +1,32 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import { useStateContext } from "../../../context/StateContext";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const router = useRouter();
-  const { headerStatus, setHeaderStatus} = useStateContext(); 
-  const [ sticky, setSticky] = useState(false);
+  const { headerStatus, setHeaderStatus } = useStateContext();
+  const [sticky, setSticky] = useState(false);
 
-  useEffect(()=>{
-    if(typeof window !== undefined){
-      window.addEventListener("scroll", function (e){
-        if (window.scrollY > 0){
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      window.addEventListener("scroll", function (e) {
+        if (window.scrollY > 0) {
           setSticky(true);
-        } else{
+        } else {
           setSticky(false);
         }
-      })
+      });
     }
-  },[])
+  }, []);
 
   return (
     <header
-     className={`header ${headerStatus ? "open" : null} ${sticky ? "sticky" : null}`}>
+      className={`header ${headerStatus ? "open" : null} ${
+        sticky ? "sticky" : null
+      }`}
+    >
       <ul className="headerMenu">
         <li>
           {router?.pathname === "/" ? (
@@ -32,7 +35,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               to="section-herosection"
-              onClick={()=> setHeaderStatus(false)}
+              onClick={() => setHeaderStatus(false)}
             >
               Home
             </ScrollLink>
@@ -49,13 +52,13 @@ const Header = () => {
               spy={true}
               smooth={true}
               to="section-howitworks"
-              onClick={()=> setHeaderStatus(false)}
+              onClick={() => setHeaderStatus(false)}
             >
               How it Works
             </ScrollLink>
           ) : (
             <Link href="/">
-              <a onClick={()=> setHeaderStatus(false)}>How it Works</a>
+              <a onClick={() => setHeaderStatus(false)}>How it Works</a>
             </Link>
           )}
         </li>
@@ -66,13 +69,13 @@ const Header = () => {
               spy={true}
               smooth={true}
               to="section-aboutus"
-              onClick={()=> setHeaderStatus(false)}
+              onClick={() => setHeaderStatus(false)}
             >
               About Us
             </ScrollLink>
           ) : (
             <Link href="/">
-              <a onClick={()=> setHeaderStatus(false)}>About Us</a>
+              <a onClick={() => setHeaderStatus(false)}>About Us</a>
             </Link>
           )}
         </li>
@@ -83,13 +86,13 @@ const Header = () => {
               spy={true}
               smooth={true}
               to="section-contactus"
-              onClick={()=> setHeaderStatus(false)}
+              onClick={() => setHeaderStatus(false)}
             >
               Contact Us
             </ScrollLink>
           ) : (
             <Link href="/">
-              <a onClick={()=> setHeaderStatus(false)}>Contact Us</a>
+              <a onClick={() => setHeaderStatus(false)}>Contact Us</a>
             </Link>
           )}
         </li>

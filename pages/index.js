@@ -6,13 +6,13 @@ import React from "react";
 // import Gallery from "../components/Carousel";
 // import ProductDetails from "./product/[slug]";
 // import ReactFullpage from "@fullpage/react-fullpage";
-import { useRef } from "react";
-import { Element } from "react-scroll";
-import useScrollSnap from "react-use-scroll-snap";
 import AboutUs from "../components/sections/aboutus/AboutUs";
 import ContactUs from "../components/sections/contactus/ContactUs";
 import Herosection from "../components/sections/herosection/Herosection";
-import HowItWorks from "../components/sections/howitWorks/Howitworks";
+import HowItWorks from "../components/sections/howitworks/Howitworks";
+import { Element, Link as ScrollLink } from "react-scroll";
+import useScrollSnap from "react-use-scroll-snap";
+import { useRef } from "react";
 import RightBullets from "../components/utils/RightBullets";
 
 export default function Home() {
