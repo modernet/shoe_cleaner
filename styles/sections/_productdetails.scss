@@ -8,11 +8,11 @@
   font-weight: 400;
 
   @media #{$layout-tablet} {
-    padding-top: 80px;
+    padding-top: 120px;
     padding-bottom: 80px;
   }
   @media #{$layout-mobile} {
-    padding-top: 80px;
+    padding-top: 150px;
   }
 }
 

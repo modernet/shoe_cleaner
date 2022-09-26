@@ -1,13 +1,29 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { useStateContext } from "../../../context/StateContext";
 
 const Header = () => {
   const router = useRouter();
   const { headerStatus, setHeaderStatus} = useStateContext(); 
+  const [ sticky, setSticky] = useState(false);
+
+  useEffect(()=>{
+    if(typeof window !== undefined){
+      window.addEventListener("scroll", function (e){
+        if (window.scrollY > 0){
+          setSticky(true);
+        } else{
+          setSticky(false);
+        }
+      })
+    }
+  },[])
+
   return (
-    <header className={`header ${headerStatus ? "open" : null}`}>
+    <header
+     className={`header ${headerStatus ? "open" : null} ${sticky ? "sticky" : null}`}>
       <ul className="headerMenu">
         <li>
           {router?.pathname === "/" ? (
